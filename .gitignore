@@ -1,0 +1,9 @@
+# Build results
+target/
+
+# IDEs
+.idea/
+.vscode/
+
+# MacOS
+.DS_Store

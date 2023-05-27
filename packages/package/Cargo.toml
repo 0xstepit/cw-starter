@@ -1,0 +1,13 @@
+[package]
+name = "package"
+description = "Package description."
+version = { workspace = true }
+edition = { workspace = true }
+author =  { workspace = true }
+license = { workspace = true }
+license-file = { workspace = true }
+keywords = { workspace = true }
+
+[dependencies]
+cosmwasm-std = { workspace = true }
+cosmwasm-schema = { workspace = true }

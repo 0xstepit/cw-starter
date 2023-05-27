@@ -1,0 +1,25 @@
+[package]
+name = "contract"
+description = "Contract description."
+version = { workspace = true }
+edition = { workspace = true }
+author =  { workspace = true }
+license = { workspace = true }
+license-file = { workspace = true }
+keywords = { workspace = true }
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+backtraces = ["cosmwasm-std/backtraces"]
+library = []
+
+[dependencies]
+cosmwasm-std = { workspace = true }
+cosmwasm-schema = { workspace = true }
+cw-storage-plus = { workspace = true }
+package      = { path = "../../packages/package" }
+
+[dev-dependencies]
+cw-multi-test = "0.16"
