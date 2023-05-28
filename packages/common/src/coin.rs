@@ -10,6 +10,4 @@ pub struct Coin {
     pub amount: Uint128,
 }
 
-impl Coin {
-    
-}
+impl Coin {}

@@ -4,7 +4,6 @@ description = "Contract description."
 version = { workspace = true }
 edition = { workspace = true }
 author =  { workspace = true }
-license = { workspace = true }
 license-file = { workspace = true }
 keywords = { workspace = true }
 
@@ -19,7 +18,10 @@ library = []
 cosmwasm-std = { workspace = true }
 cosmwasm-schema = { workspace = true }
 cw-storage-plus = { workspace = true }
-package      = { path = "../../packages/package" }
+cw-ownable = { workspace = true }
+cw2 = {workspace = true }
+thiserror = { workspace = true }
+common      = { path = "../../packages/common" }
 
 [dev-dependencies]
 cw-multi-test = "0.16"

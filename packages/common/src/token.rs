@@ -9,6 +9,4 @@ pub enum Token {
     Cw20(String),
 }
 
-impl Token {
-    
-}
+impl Token {}

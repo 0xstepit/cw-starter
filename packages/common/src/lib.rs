@@ -1,2 +1,2 @@
-pub mod token;
 pub mod coin;
+pub mod token;
