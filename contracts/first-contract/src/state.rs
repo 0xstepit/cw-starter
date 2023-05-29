@@ -13,4 +13,5 @@ pub struct Config {
     pub token: Token,
 }
 
+/// Single object storing contract's configuration.
 pub const CONFIG: Item<Config> = Item::new("config");

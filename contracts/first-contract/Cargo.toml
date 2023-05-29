@@ -1,5 +1,5 @@
 [package]
-name = "contract"
+name = "first-contract"
 description = "Contract description."
 version = { workspace = true }
 edition = { workspace = true }

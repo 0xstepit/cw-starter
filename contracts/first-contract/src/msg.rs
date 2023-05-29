@@ -16,16 +16,20 @@ pub struct InstantiateMsg {
     pub allowed_token: Token,
 }
 
+/// This enum describes available contract's execution messages.
 #[cw_ownable_execute]
 #[cw_serde]
 pub enum ExecuteMsg {
+    /// Allows to update the contract's `allowed_token`.
     UpdateToken { new_token: Token },
 }
 
+/// This enum describes available contract's query messages.
 #[cw_ownable_query]
 #[cw_serde]
 #[derive(QueryResponses)]
 pub enum QueryMsg {
+    /// Allows to retrieve 
     #[returns[Token]]
     AllowedToken {},
 }

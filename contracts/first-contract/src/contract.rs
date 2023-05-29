@@ -86,9 +86,21 @@ pub mod query {
 // -------------------------------------------------------------------------------------------------
 // Unit tests
 // -------------------------------------------------------------------------------------------------
-#[cfg(tests)]
+#[cfg(test)]
 mod tests {
+    use common::token::Token;
+    use cosmwasm_std::testing::{mock_dependencies, mock_info, mock_env};
+
+    use crate::msg::InstantiateMsg;
+
+    use super::instantiate;
 
     #[test]
-    fn proper_instantiation() {}
+    fn proper_instantiation() {
+        let mut deps = mock_dependencies();
+        let env = mock_env();
+        let info = mock_info("stepit", &[]);
+
+        instantiate(deps.as_mut(), env, info, InstantiateMsg {owner: "0xstepit000".to_string(), allowed_token: Token::Native("ATOM".to_string())});
+    }
 }

@@ -88,20 +88,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "520fbf3c07483f94e3e3ca9d0cfd913d7718ef2483d2cfd91c0d9e91474ab913"
 
 [[package]]
-name = "contract"
-version = "0.1.0"
-dependencies = [
- "common",
- "cosmwasm-schema",
- "cosmwasm-std",
- "cw-multi-test",
- "cw-ownable",
- "cw-storage-plus",
- "cw2",
- "thiserror",
-]
-
-[[package]]
 name = "cosmwasm-crypto"
 version = "1.2.5"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -418,6 +404,20 @@ checksum = "d013fc25338cc558c5c2cfbad646908fb23591e2404481826742b651c9af7160"
 dependencies = [
  "rand_core 0.6.4",
  "subtle",
+]
+
+[[package]]
+name = "first-contract"
+version = "0.1.0"
+dependencies = [
+ "common",
+ "cosmwasm-schema",
+ "cosmwasm-std",
+ "cw-multi-test",
+ "cw-ownable",
+ "cw-storage-plus",
+ "cw2",
+ "thiserror",
 ]
 
 [[package]]
