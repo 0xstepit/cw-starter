@@ -70,8 +70,7 @@ just test
 ### Lint
 
 ```shell
-just clippy
-just fmt 
+just clippy && just fmt 
 ```
 
 ## Development
