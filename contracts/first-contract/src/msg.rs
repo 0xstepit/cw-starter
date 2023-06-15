@@ -20,7 +20,7 @@ pub struct InstantiateMsg {
 #[cw_ownable_execute]
 #[cw_serde]
 pub enum ExecuteMsg {
-    /// Allows to update the contract's `allowed_token`.
+    /// Allows to update the contract's `allowed_token`. Only owner can update.
     UpdateToken { new_token: Token },
 }
 
@@ -29,7 +29,7 @@ pub enum ExecuteMsg {
 #[cw_serde]
 #[derive(QueryResponses)]
 pub enum QueryMsg {
-    /// Allows to retrieve 
+    /// Retrieve the contract allowed token.
     #[returns[Token]]
     AllowedToken {},
 }
