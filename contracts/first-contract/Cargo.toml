@@ -3,7 +3,7 @@ name = "first-contract"
 description = "Contract description."
 version = { workspace = true }
 edition = { workspace = true }
-author =  { workspace = true }
+authors =  { workspace = true }
 license-file = { workspace = true }
 keywords = { workspace = true }
 

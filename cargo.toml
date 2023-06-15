@@ -6,7 +6,7 @@ members = ["./contracts/*", "./packages/*"]
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
-author = "stepit <stepit@mib.tech"
+authors = ["stepit <stepit@mib.tech"]
 license-file = "./LICENSE"
 keywords = ["smart contract", "cosmwasm", "blockchain"]
 
