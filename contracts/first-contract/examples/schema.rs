@@ -1,6 +1,6 @@
-use first_contract::msg::{ExecuteMsg, InstantiateMsg, QueryMsg};
 use cosmwasm_schema::write_api;
- 
+use first_contract::msg::{ExecuteMsg, InstantiateMsg, QueryMsg};
+
 fn main() {
     write_api! {
         instantiate: InstantiateMsg,
