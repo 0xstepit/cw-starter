@@ -73,6 +73,12 @@ just test
 just clippy && just fmt 
 ```
 
+### JSON Schema
+
+```shell
+just schema
+```
+
 ## Development
 
 Explain any additional setup or configuration for development purposes. Include information on the project structure and any relevant details.
