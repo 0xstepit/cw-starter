@@ -29,3 +29,6 @@ optimize:
     --platform linux/arm64 \
     {{image}}
   @echo '✅ Optimized build completed.'
+
+schema:
+  ./scripts/build_schema.sh
