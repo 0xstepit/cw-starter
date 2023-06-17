@@ -13,7 +13,7 @@
     ],
     "properties": {
       "allowed_token": {
-        "description": "Representes the tokens users are allowed to deposit.",
+        "description": "Represents the tokens users are allowed to deposit.",
         "allOf": [
           {
             "$ref": "#/definitions/Token"
