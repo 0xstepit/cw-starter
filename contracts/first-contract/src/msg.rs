@@ -12,7 +12,7 @@ use cw_ownable::{cw_ownable_execute, cw_ownable_query};
 pub struct InstantiateMsg {
     /// Contract owner address
     pub owner: String,
-    /// Representes the tokens users are allowed to deposit.
+    /// Represents the tokens users are allowed to deposit.
     pub allowed_token: Token,
 }
 
