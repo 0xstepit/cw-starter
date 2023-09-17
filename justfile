@@ -21,7 +21,7 @@ default-flow: fmt clippy test
 
 # Run workspace optimizer
 platform := if arch() =~ "aarch64" {"linux/arm64"} else {"linux/amd64"}
-image := if arch() =~ "aarch64" {"cosmwasm/workspace-optimizer-arm64:0.12.12"} else {"cosmwasm/workspace-optimizer:0.12.12"}
+image := if arch() =~ "aarch64" {"cosmwasm/workspace-optimizer-arm64:0.14.0"} else {"cosmwasm/workspace-optimizer:0.14.0"}
 optimize:
   @echo '🚀 Running build optimizer...'
   docker run --rm -v "$(pwd)":/code \
