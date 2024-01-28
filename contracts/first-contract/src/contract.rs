@@ -4,7 +4,7 @@ The **contract.rs** file typically contains the main contract code and logic. It
 */
 
 use cosmwasm_std::{
-    entry_point, to_binary, Binary, Deps, DepsMut, Env, MessageInfo, Response, StdResult,
+    entry_point, to_json_binary, Binary, Deps, DepsMut, Env, MessageInfo, Response, StdResult,
 };
 
 use crate::{
@@ -57,8 +57,8 @@ pub fn execute(
 pub fn query(deps: Deps, _env: Env, msg: QueryMsg) -> StdResult<Binary> {
     use QueryMsg::*;
     match msg {
-        Ownership {} => to_binary(&cw_ownable::get_ownership(deps.storage)?),
-        AllowedToken {} => to_binary(&query::allowed_token(deps)?),
+        Ownership {} => to_json_binary(&cw_ownable::get_ownership(deps.storage)?),
+        AllowedToken {} => to_json_binary(&query::allowed_token(deps)?),
     }
 }
 
@@ -111,7 +111,7 @@ pub mod query {
 mod tests {
     use common::token::Token;
     use cosmwasm_std::{
-        from_binary,
+        from_json,
         testing::{mock_dependencies, mock_env, mock_info},
         Addr,
     };
@@ -181,7 +181,7 @@ mod tests {
             let info = mock_info(OWNER, &[]);
             execute(deps.as_mut(), env.clone(), info, exec_msg).unwrap();
 
-            let resp: Token = from_binary(&query(deps.as_ref(), env, q_msg).unwrap()).unwrap();
+            let resp: Token = from_json(query(deps.as_ref(), env, q_msg).unwrap()).unwrap();
             assert_eq!(
                 resp,
                 Token::Cw20(CW20.to_string()),
