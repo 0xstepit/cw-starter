@@ -6,14 +6,14 @@ members = ["./contracts/*", "./packages/*"]
 [workspace.package]
 version = "0.1.0"
 edition = "2021"
-authors = ["stepit <stepit@mib.tech"]
+authors = ["stefanofrancesco.pitton@gmail.com"]
 license-file = "./LICENSE"
 keywords = ["smart contract", "cosmwasm", "blockchain"]
 
 [workspace.dependencies]
-cosmwasm-std    = "1.2"
-cosmwasm-schema = "1.2"
-cw-storage-plus = "1.0"
-cw2 = "1.0"
+cosmwasm-std    = "1.5"
+cosmwasm-schema = "1.5"
+cw-storage-plus = "1.2"
+cw2 = "1.1"
 cw-ownable = "0.5"
 thiserror = "1"
